@@ -1,3 +1,2 @@
-import { RootState } from './RootState';
-
-export type { RootState };
+export type { RootStateType } from 'types/RootStateType';
+export type { FetchDataType } from 'types/FetchDataType';

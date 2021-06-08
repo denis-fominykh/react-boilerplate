@@ -21,7 +21,7 @@ type Answers = { [P in SliceProptNames]: string };
 
 export const rootStatePath = path.join(
   __dirname,
-  '../../../src/types/RootState.ts',
+  '../../../src/types/RootStateType.ts',
 );
 
 export const sliceGenerator: PlopGeneratorConfig = {
@@ -58,7 +58,7 @@ export const sliceGenerator: PlopGeneratorConfig = {
     actions.push({
       type: 'add',
       path: `${slicePath}/index.ts`,
-      templateFile: './slice/index.ts.hbs',
+      templateFile: './slice/index.tsx.hbs',
       abortOnFail: true,
     });
     actions.push({

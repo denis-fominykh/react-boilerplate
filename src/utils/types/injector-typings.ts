@@ -1,11 +1,11 @@
-import { RootState } from 'types';
+import { RootStateType } from 'types';
 import { Saga } from 'redux-saga';
 import { SagaInjectionModes } from 'redux-injectors';
 import { Reducer, AnyAction } from '@reduxjs/toolkit';
 
-type RequiredRootState = Required<RootState>;
+type RequiredRootState = Required<RootStateType>;
 
-export type RootStateKeyType = keyof RootState;
+export type RootStateKeyType = keyof RootStateType;
 
 export type InjectedReducersType = {
   [P in RootStateKeyType]?: Reducer<RequiredRootState[P], AnyAction>;
