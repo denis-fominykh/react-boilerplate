@@ -28,10 +28,10 @@ export const starshipsReducer = createReducer(initialState, builder => {
       ...state,
       error: payload,
     }))
-    .addCase(starshipsActions.fill, (state, action) => ({
+    .addCase(starshipsActions.fill, (state, { payload }) => ({
       ...state,
       data: {
-        ...action.payload,
+        ...payload,
       },
       error: false,
     }))
