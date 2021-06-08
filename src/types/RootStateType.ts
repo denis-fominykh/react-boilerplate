@@ -6,6 +6,6 @@
 */
 import { StarshipsState } from 'bus/starships/types';
 
-export type RootStateType = {
+export interface RootStateType {
   starships: StarshipsState;
-};
+}
